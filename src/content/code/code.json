@@ -1,0 +1,40 @@
+[
+    {
+        "flavor": "webapp / hardware ecosystem",
+        "title": "Bandit",
+        "year": "2015 - ongoing",
+        "description": "A browser-based music tool and open source USB device for managing multiple tempi simultaneously.", 
+        "links": {
+            "website": "https://banditsound.com",
+            "github": "https://github.com/ultraturtle0/timebandit"
+        }
+    },
+    {
+        "flavor": "Max/MSP object (C++)",
+        "title": "polyme~",
+        "year": "2017",
+        "description": "Max for Live object for flexible Monome control of Ableton Live.",
+        "links": {
+            "github": "https://github.com/ultraturtle0/polyme" 
+        }
+    },
+    {
+        "flavor": "Max/MSP",
+        "title": "Intervallate",
+        "year": "2016",
+        "description": "Max for Live patch for experimenting with intervallic MIDI patterns on Monome.",
+        "links": {
+            "github": "https://github.com/ultraturtle0/intervallate"
+        }
+    },
+    {
+        "flavor": "Python",
+        "title": "pyfuck",
+        "year": "2016",
+        "description": "Python Brainfuck interpreter.",
+        "links": {
+            "github": "https://github.com/ultraturtle0/pyfuck"
+        }
+    }
+]
+        

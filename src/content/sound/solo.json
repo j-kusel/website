@@ -1,0 +1,23 @@
+[
+    {
+        "flavor": "hn. + video + live electronics",
+        "title": "A Cold Surrogate, A Penance-Play",
+        "year": "2015",
+        "description": "Premiered by Mathew James, April 7, 2015", 
+        "links": {
+            "score": "/media/acs,ap-pSCORE.pdf",
+            "recording": "https://www.youtube.com/watch?v=gT_8Gj0i_7o",
+            "Mathew James": "https://mathewsjameshorn.com/"
+        }
+    },
+    {
+        "flavor": "iPhone",
+        "title": "Fortnight Vigil; Sheepish Nude, the Interminable Golden Hour",
+        "year": "2014",
+        "description": "An etude for iPhone theremin app or any sine wave generator with variable pitch, volume, and duration.",
+        "links": {
+            "score": "/media/FVSNtIGH.pdf"
+        }
+    }
+]
+        
