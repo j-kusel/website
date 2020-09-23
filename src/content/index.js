@@ -27,6 +27,7 @@ var Content = styled.div`
 
     .title {
         padding: 0px 18px;
+        margin: 0px;
         font-size: 1rem;
     }
 

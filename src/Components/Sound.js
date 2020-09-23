@@ -8,13 +8,11 @@ var ContentCol = styled(Col)`
     text-align: left;
     background-color: rgba(255,186,0,0.1);
     padding: 10px;
-    border-left: 1px solid black;
     ${props => props.bottom && 'border-bottom: 1px solid black;'}
 `;
 
 var BorderLink = styled(Link)`
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    text-align: right;
     &:hover {
         background: linear-gradient(15deg, rgba(255,211,0,0) 60%, rgba(255,186,0,0.6) 100%);
         opacity: 1.0;
@@ -53,7 +51,7 @@ class Sound extends Component {
     }
 
     render() {
-        let paddingTop = (window.innerHeight / 5 + this.props.nudge.y) + 'px';
+        let paddingTop = (window.innerHeight / 6 + this.props.nudge.y) + 'px';
         let marginLeft = this.props.nudge.x + 'px';
 
         let tabs = ['solo', 'chamber', 'electronic'].map(tab => (
@@ -65,30 +63,30 @@ class Sound extends Component {
                 <Container>
                     <Row>
                         <Col xl={3}></Col>
-                        <Col xl={6}>
+                        <Col xl={1} style={{ paddingRight: '0px' }}>
+                            <Container>
+                                        <Row style={{ height: '350px', borderBottom: '1px solid black' }}/>
+                                        <Row>
+                                            <Col style={{ textAlign: 'right', padding: '0px' }}><BorderLink onClick={() => this.props.pages('home')}>home</BorderLink></Col>
+                                            <Col xl={10}></Col>
+                                        </Row>
+                            </Container>
+                        </Col>
+                                       
+                                        
+                                        
+                        <Col xl={5} style={{ padding: '0px', borderLeft: '1px solid black' }}>
                             <Container>
                                 {/* HEADER ROW */}
                                 <Row style={{ height: '50px' }}>
-                                    <Col xl={2} style={{ padding: '0px' }}/>
-                                    <Col xl={10} style={{ padding: '0px', borderLeft: '1px solid black' }}>
-                                        <Container>
-                                            <Row>
-                                                {tabs}
-                                            </Row>
-                                        </Container>
-                                    </Col>
+                                    {tabs}
                                 </Row>
                                 <Row style={{ height: '300px', overflowY: 'scroll' }}>
-                                    <Col xl={2} style={{ padding: '0px' }}></Col>
-                                    <ContentCol bottom={true} xl={10}>
+                                    <ContentCol bottom={true}>
                                         {this.state.mode === 'solo' && (<Solo></Solo>)}
                                         {this.state.mode === 'chamber' && (<Chamber/>)}
                                         {this.state.mode === 'electronic' && (<Electronic/>)}
                                     </ContentCol>
-                                </Row>
-                                <Row>
-                                    <Col style={{ textAlign: 'right', padding: '0px' }} xl={2}><BorderLink onClick={() => this.props.pages('home')}>home</BorderLink></Col>
-                                    <Col xl={10}></Col>
                                 </Row>
                             </Container>
                         </Col>

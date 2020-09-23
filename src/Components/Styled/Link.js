@@ -5,7 +5,7 @@ export var Link = styled.button`
     border: none;
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: left;
-    width: 75%;
+    width: 100%;
     margin: 0px;
-    padding: 12px 10px;
+    padding: 12px 18px;
 `;

@@ -9,7 +9,9 @@ var DispRow = styled(Row)`
 
 var Splash = styled.h1`
     font-family: 'Open Sans Condensed', sans-serif;
-    text-align: center;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 18px;
 `;
 
 
@@ -58,18 +60,16 @@ class Home extends Component {
                 <Container>
                     <Row>
                         <Col xl={4}></Col>
-                        <Col xl={4}>
+                        <Col xl={2} style={{ paddingRight: '0px' }}><Splash>JORDAN KUSEL</Splash></Col>
+                        <Col xl={2} style={{ paddingLeft: '0px' }}>
                             <Container>
                                 <DispRow>
-                                    <Col xl={6}></Col>
                                     <RightCol deg={15} cb={(e) => this.handlePage(e, 'sound')}>sound</RightCol>
                                 </DispRow>
                                 <DispRow>
-                                    <Col xl={6}><Splash>JORDAN KUSEL</Splash></Col>
                                     <RightCol cb={(e) => this.handlePage(e, 'code')}>code</RightCol>
                                 </DispRow>
                                 <DispRow last={true}>
-                                    <Col xl={6}></Col>
                                     <RightCol deg={165} last={true} cb={(e) => this.handlePage(e, 'bio')}>bio</RightCol>
                                 </DispRow>
                             </Container>
