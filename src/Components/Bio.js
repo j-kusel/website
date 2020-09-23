@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from './Styled/Link';
 import styled from 'styled-components';
-import { Code } from '../content/index';
 
 var ContentCol = styled(Col)`
     text-align: left;
+    a {
+        text-decoration: none;
+        color: inherit;
+        opacity: 0.6;
+        transition: opacity 300ms;
+        &:hover {
+            opacity: 1.0;
+        }
+    }
     background-color: rgba(255,186,0,0.1);
-    padding: 10px;
+    padding: 20px;
     border-left: 1px solid black;
     ${props => props.bottom && 'border-bottom: 1px solid black;'}
 `;
@@ -22,23 +30,7 @@ var BorderLink = styled(Link)`
 
 `;
 
-var TabCol = (props) => {
-    let Tab = styled(Col)`
-        background-color: transparent;
-        ${!props.active && 'border-bottom: 1px solid black;'}
-        border-right: 1px solid black;
-        ${props.active && 'background-color: rgba(255,186,0,0.1);'}
-        text-align: center;
-    `;
-
-    return (
-        <Tab xl={4}>
-            <Link onClick={props.switchTab}>{props.children}</Link>
-        </Tab>
-    );
-};
-
-class CodeComp extends Component {
+class Bio extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -56,10 +48,6 @@ class CodeComp extends Component {
         let paddingTop = (window.innerHeight / 5 + this.props.nudge.y) + 'px';
         let marginLeft = this.props.nudge.x + 'px';
 
-        let tabs = ['code'].map(tab => (
-            <TabCol active={this.state.mode === tab} switchTab={() => this.switchTab(tab)}>{tab}</TabCol>
-        ));
-
         return (
             <div style={{ paddingTop, marginLeft, position: 'absolute', width: '100%' }} id="sound">
                 <Container>
@@ -67,21 +55,10 @@ class CodeComp extends Component {
                         <Col xl={3}></Col>
                         <Col xl={6}>
                             <Container>
-                                {/* HEADER ROW */}
-                                <Row style={{ height: '50px' }}>
-                                    <Col xl={2} />
-                                    <Col xl={10} style={{ padding: '0px', borderLeft: '1px solid black' }}>
-                                        <Container>
-                                            <Row>
-                                                {tabs}
-                                            </Row>
-                                        </Container>
-                                    </Col>
-                                </Row>
-                                <Row style={{ height: '300px', overflow: 'scroll' }}>
+                                <Row style={{ height: '300px' }}>
                                     <Col xl={2}></Col>
                                     <ContentCol bottom={true} xl={10}>
-                                        <Code/>
+                                        <p>Jordan Kusel is an experimental composer, full-stack software engineer, and musician currently living in Los Angeles, CA. His interests include bricolage, cybernetics, open-source soft/hardware, DIY/amateurism, and skateboarding. His current project is <a href="https://github.com/ultraturtle0/timebandit">Bandit</a>, a web application and composition/performance ecosystem for solving the problem of polytemporality in music. For commissions, employment inquiries, or congenial banter please email <a href="mailto:jordankusel@protonmail.com">jordankusel@protonmail.com</a>.</p>
                                     </ContentCol>
                                 </Row>
                                 <Row>
@@ -99,4 +76,4 @@ class CodeComp extends Component {
 
 }
 
-export default CodeComp;
+export default Bio;

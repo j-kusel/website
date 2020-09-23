@@ -60,7 +60,7 @@ let mapper = (prefix) =>
         <p className="description">{s.description}</p>
         <div className="projectLinks">
             {Object.keys(s.links).map(key => 
-                (<a key={s.title + 'link'} target="_blank" href={s.links[key]} className="projectLink">{key}</a>))}
+                (<a key={s.title + 'link'} target="_blank" rel="noopener noreferrer" href={s.links[key]} className="projectLink">{key}</a>))}
         </div>
     </div>)});
 

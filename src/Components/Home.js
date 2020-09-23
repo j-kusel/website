@@ -7,6 +7,10 @@ var DispRow = styled(Row)`
     height: 50px;
 `;
 
+var Splash = styled.h1`
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+`;
 
 
 var RightCol = (props) => {
@@ -61,7 +65,7 @@ class Home extends Component {
                                     <RightCol deg={15} cb={(e) => this.handlePage(e, 'sound')}>sound</RightCol>
                                 </DispRow>
                                 <DispRow>
-                                    <Col xl={6}>j kusel</Col>
+                                    <Col xl={6}><Splash>JORDAN KUSEL</Splash></Col>
                                     <RightCol cb={(e) => this.handlePage(e, 'code')}>code</RightCol>
                                 </DispRow>
                                 <DispRow last={true}>

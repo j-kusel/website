@@ -38,9 +38,6 @@ var TabCol = (props) => {
     );
 };
 
-var Content = (props) => {
-};
-
 class Sound extends Component {
     constructor(props) {
         super(props);
@@ -84,7 +81,7 @@ class Sound extends Component {
                                 <Row style={{ height: '300px', overflowY: 'scroll' }}>
                                     <Col xl={2} style={{ padding: '0px' }}></Col>
                                     <ContentCol bottom={true} xl={10}>
-                                        {this.state.mode === 'solo' && (<Solo><p>hello</p></Solo>)}
+                                        {this.state.mode === 'solo' && (<Solo></Solo>)}
                                         {this.state.mode === 'chamber' && (<Chamber/>)}
                                         {this.state.mode === 'electronic' && (<Electronic/>)}
                                     </ContentCol>
@@ -98,7 +95,6 @@ class Sound extends Component {
                         <Col xl={3}></Col>
                     </Row>
                 </Container>
-                <p>hello</p>
             </div>
         )
     }

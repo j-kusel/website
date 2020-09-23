@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Home from './Home';
 import Sound from './Sound';
 import Code from './Code';
-import { Container, Row, Col } from 'react-bootstrap';
+import Bio from './Bio';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 
@@ -102,7 +102,11 @@ class Body extends Component {
                       <Code nudge={this.state.mouse} pages={this.handlePages}/>
                     </CSSTransition>)
                   }
-              </TransitionGroup>
+                  { this.state.mode === 'bio' && (<CSSTransition key="code" timeout={500} classNames="codepage">
+                      <Bio nudge={this.state.mouse} pages={this.handlePages}/>
+                    </CSSTransition>)
+                  }              
+                </TransitionGroup>
             </StyledBody>
         )
     }
