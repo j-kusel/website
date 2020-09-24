@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./config/config');
 const configExpress = require('./config/express');
 
 var app = configExpress();
